@@ -6,7 +6,7 @@
         <div class="txt text-white">
             <span v-if="cardNumber" class="fs-2 d-block mb-2">{{cardNumber}}</span>
             <span v-else class="fs-2 d-block mb-2">0000 0000 0000 0000</span>
-            <span v-if="name">{{name}}</span>
+            <span v-if="name" class=" text-uppercase">{{name}}</span>
             <span v-else>Francesco Ciano</span>
             <span class="exp-date position-absolute bottom-0">
                 <span v-if="expirationDateMonth">{{expirationDateMonth}}</span><span v-else>00</span>/<span v-if="expirationDateYear">{{expirationDateYear}}</span><span v-else>00</span>
