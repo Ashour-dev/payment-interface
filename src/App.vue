@@ -33,6 +33,6 @@ export default {
   width: 30vw;
 }
 .cards{
-  padding: 14vh 15vw;
+  padding: 14vh 12vw;
 }
 </style>
