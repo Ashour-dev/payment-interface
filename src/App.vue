@@ -5,18 +5,21 @@
       <FrontCard/>
       <BackCard/>
     </div>
+    <DataEntery/>
   </div>
 </template>
 
 <script>
 import FrontCard from "./components/FrontCard.vue";
 import BackCard from "./components/BackCard.vue";
+import DataEntery from "./components/DataEntery.vue";
 
 export default {
   name: "App",
   components: {
     FrontCard,
-    BackCard
+    BackCard,
+    DataEntery
   },
 };
 </script>

@@ -42,8 +42,8 @@ export default {
             right: -4vw;
         }
     }
-}
-.cont>*{
-    position: absolute;
+    &>*{
+        position: absolute;
+    }
 }
 </style>
