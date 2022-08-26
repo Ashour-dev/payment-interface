@@ -39,7 +39,7 @@ export default {
         top: 20vh;
         left: 2vw;
         .exp-date{
-            right: -4vw;
+            right: -2vw;
         }
     }
     &>*{

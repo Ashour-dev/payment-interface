@@ -26,9 +26,10 @@ export default {
 
 <style lang="scss">
 @import '~bootstrap/scss/bootstrap';
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500&display=swap');
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  color: #2c3e50;
+  font-family: 'Space Grotesk', sans-serif;
+  color: hsl(278, 68%, 11%);
   position: relative;
 }
 .desktopBackground{
