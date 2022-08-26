@@ -2,10 +2,10 @@
   <div id="app">
     <img class="desktopBackground position-absolute top-0" src="./assets/bg-main-desktop.png" alt="Background" />
     <div class="cards">
-      <FrontCard/>
-      <BackCard/>
+      <FrontCard :name="name" :cardNumber="cardNumber" :expirationDateMonth="expirationDateMonth" :expirationDateYear="expirationDateYear"/>
+      <BackCard :cvv="cvv"/>
     </div>
-    <DataEntery/>
+    <DataEntery @name="assignName" @cardNumber="assignCardNum" @expirationDateMonth="assignExpirationMonth" @expirationDateYear="assignExpirationYear" @cvv="assignCvv"/>
   </div>
 </template>
 
@@ -21,6 +21,34 @@ export default {
     BackCard,
     DataEntery
   },
+  data(){
+    return{
+      name:null,
+      cardNumber:null,
+      expirationDateMonth:null,
+      expirationDateYear:null,
+      cvv:null,
+    }
+  },
+  methods:{
+    assignName(name){
+      this.name=name;
+    },
+    assignCardNum(cardNumber){
+      this.cardNumber=cardNumber;
+      console.log(cardNumber);
+    },
+    assignExpirationMonth(expirationDateMonth){
+      this.expirationDateMonth=expirationDateMonth;
+    },
+    assignExpirationYear(expirationDateYear){
+      this.expirationDateYear=expirationDateYear;
+    },
+    assignCvv(cvv){
+      this.cvv=cvv;
+    }
+  }
+
 };
 </script>
 

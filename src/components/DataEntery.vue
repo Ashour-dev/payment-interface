@@ -2,20 +2,20 @@
     <div class="cont d-flex flex-wrap">
         <div class="form-group mb-4" id="card-number-field">
                 <label for="name">cardholder name</label>
-                <input type="text" class="form-control" id="name" placeholder="e.g. Francesco Ciano">
+                <input type="text" class="form-control" v-model="name" @keyup="$emit('name',name)" id="name" placeholder="e.g. Francesco Ciano">
         </div>
         <div class="form-group mb-4" id="card-number-field">
                 <label for="cardNumber">Card Number</label>
-                <input type="text" class="form-control" id="cardNumber" placeholder="e.g. 1234 5678 9123 0000">
+                <input type="txt" class="form-control" v-model="cardNumber"  @keyup="$emit('cardNumber',cardNumber)" id="cardNumber" placeholder="e.g. 1234 5678 9123 0000">
         </div>
         <div class="form-group w-50" id="expiration-date-field">
             <label class="w-100" for="expiration-date">EXP. Date (MM/YY)</label>
-            <input type="text" class="form-control d-inline-block me-1" id="expiration-date-month" placeholder="MM">
-            <input type="text" class="form-control d-inline" id="expiration-date-year" placeholder="YY">
+            <input type="number" maxlength="2" class="form-control d-inline-block me-1" v-model="expirationDateMonth" @keyup="$emit('expiration-date-month',expirationDateMonth)" id="expiration-date-month" placeholder="MM">
+            <input type="number" maxlength="2" class="form-control d-inline" v-model="expirationDateYear" @keyup="$emit('expiration-date-year',expirationDateYear)" id="expiration-date-year" placeholder="YY">
         </div>
         <div class="form-group w-50 mb-4" id="cvv-field">
             <label for="cvv">CVV</label>
-            <input type="text" class="form-control" id="cvv" placeholder="e.g. 123">
+            <input type="number" maxlength="3" class="form-control" v-model="cvv" @keyup="$emit('cvv',cvv)" id="cvv" placeholder="e.g. 123">
         </div>
         <button type="button" class="btn btn-dark py-2">confirm</button>
     </div>
@@ -23,7 +23,16 @@
 
 <script>
 export default {
-    name:'DataEntery'
+    name:'DataEntery',
+    data(){
+        return{
+            name:null,
+            cardNumber:null,
+            expirationDateMonth:null,
+            expirationDateYear:null,
+            cvv:null,
+        }
+    }
 }
 </script>
 
@@ -48,5 +57,10 @@ export default {
         label{
             margin-bottom: 7px;
         }
+        input::-webkit-outer-spin-button,
+        input::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+}
     }
 </style>

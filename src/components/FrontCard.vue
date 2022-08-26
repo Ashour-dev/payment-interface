@@ -4,16 +4,26 @@
         <div class="full-circle rounded-circle"></div>
         <div class="empty-circle rounded-circle"></div>
         <div class="txt text-white">
-            <span class="fs-2 d-block mb-2">0000 0000 0000 0000</span>
-            <span>Femia Francesco</span>
-            <span class="exp-date position-absolute bottom-0">00/00</span>
+            <span v-if="cardNumber" class="fs-2 d-block mb-2">{{cardNumber}}</span>
+            <span v-else class="fs-2 d-block mb-2">0000 0000 0000 0000</span>
+            <span v-if="name">{{name}}</span>
+            <span v-else>Francesco Ciano</span>
+            <span class="exp-date position-absolute bottom-0">
+                <span v-if="expirationDateMonth">{{expirationDateMonth}}</span><span v-else>00</span>/<span v-if="expirationDateYear">{{expirationDateYear}}</span><span v-else>00</span>
+            </span>
         </div>
     </div>
 </template>
 
 <script>
 export default {
-    name:'FrontCard'
+    name:'FrontCard',
+    props:{
+        name:String,
+        cardNumber:String,
+        expirationDateMonth:String,
+        expirationDateYear:String,
+        }
 }
 </script>
 
@@ -39,7 +49,7 @@ export default {
         top: 20vh;
         left: 2vw;
         .exp-date{
-            right: -2vw;
+            right: -3.2vw;
         }
     }
     &>*{
