@@ -10,8 +10,8 @@
         </div>
         <div class="form-group w-50" id="expiration-date-field">
             <label class="w-100" for="expiration-date">EXP. Date (MM/YY)</label>
-            <input type="number" maxlength="2" class="form-control d-inline-block me-1" v-model="expirationDateMonth" @keyup="$emit('expiration-date-month',expirationDateMonth)" id="expiration-date-month" placeholder="MM">
-            <input type="number" maxlength="2" class="form-control d-inline" v-model="expirationDateYear" @keyup="$emit('expiration-date-year',expirationDateYear)" id="expiration-date-year" placeholder="YY">
+            <input type="number" maxlength="2" class="form-control d-inline-block me-1" v-model="expirationDateMonth" @keyup="$emit('expirationDateMonth',expirationDateMonth)" id="expirationDateMonth" placeholder="MM">
+            <input type="number" maxlength="2" class="form-control d-inline" v-model="expirationDateYear" @keyup="$emit('expirationDateYear',expirationDateYear)" id="expirationDateYear" placeholder="YY">
         </div>
         <div class="form-group w-50 mb-4" id="cvv-field">
             <label for="cvv">CVV</label>
@@ -51,7 +51,7 @@ export default {
         }
         width: 28vw;
         text-transform: uppercase;
-        #expiration-date-month,#expiration-date-year{
+        #expirationDateMonth,#expirationDateYear{
             width: 47%;
         }
         label{

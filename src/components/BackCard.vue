@@ -16,9 +16,10 @@ export default {
 <style lang="scss" scoped>
     .cont{
         margin-left: 5vw;
+        width: fit-content;
         span{
             top: 15vh;
-            right: 45.5vw;
+            right: 3.5vw;
         }
     }
 </style>

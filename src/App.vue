@@ -40,9 +40,11 @@ export default {
     },
     assignExpirationMonth(expirationDateMonth){
       this.expirationDateMonth=expirationDateMonth;
+      console.log(expirationDateMonth)
     },
     assignExpirationYear(expirationDateYear){
       this.expirationDateYear=expirationDateYear;
+      console.log(expirationDateYear)
     },
     assignCvv(cvv){
       this.cvv=cvv;
