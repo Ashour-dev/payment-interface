@@ -45,17 +45,24 @@ export default {
 
 <style lang="scss" scoped>
 @import '~bootstrap/scss/bootstrap';
-
     @include media-breakpoint-up(md) {
         .cont{
-        position: absolute;
-        top: 12vh;
-        right: 15vw;
-        padding: 15vh 0;
+        top: 7vh;
+        right: 10vw;
+        font-size: .9rem;
         }
     }
-    .cont{
-        font-size: 18px;
+
+    @include media-breakpoint-up(xl) {
+        .cont{
+        top: 12vh;
+        right: 15vw;
+        font-size: 1.15rem;
+    }
+}
+.cont{
+    position: absolute;
+    padding: 15vh 0;
         &>*{
             width: 100%;
         }
