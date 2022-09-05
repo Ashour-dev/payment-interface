@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <img class="desktopBackground position-absolute top-0" src="./assets/bg-main-desktop.png" alt="Background" />
-    <div class="cards">
+    <div class="cards position-relative">
       <FrontCard :name="name" :cardNumber="cardNumber" :expirationDateMonth="expirationDateMonth" :expirationDateYear="expirationDateYear"/>
       <BackCard :cvv="cvv"/>
     </div>
@@ -62,11 +62,21 @@ export default {
   color: hsl(278, 68%, 11%);
   position: relative;
 }
-.desktopBackground{
-  height: 100vh;
+@media (min-width: 0) {
+  .desktopBackground{
+  height: 35vh;
+  width: 100vw;
+  }
+}
+@include media-breakpoint-up(md) {
+  .desktopBackground{
+  height: 100%;
   width: 30vw;
 }
 .cards{
-  padding: 14vh 12vw;
+  padding-top: 14vh;
+  padding-left: 12vw;
+  width: fit-content;
+  }
 }
 </style>

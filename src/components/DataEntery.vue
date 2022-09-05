@@ -6,7 +6,7 @@
         </div>
         <div class="form-group mb-4" id="card-number-field">
                 <label for="cardNumber">Card Number</label>
-                <input type="txt" class="form-control" v-model="cardNumber"  @keyup="$emit('cardNumber',cardNumber)" id="cardNumber" placeholder="e.g. 1234 5678 9123 0000">
+                <input type="txt" class="form-control" v-model="cardNumber"  @keyup="$emit('cardNumber',cardNumber),cardNumberFormat()" id="cardNumber" placeholder="e.g. 1234 5678 9123 0000">
         </div>
         <div class="form-group w-50" id="expiration-date-field">
             <label class="w-100" for="expiration-date">EXP. Date (MM/YY)</label>
@@ -32,16 +32,29 @@ export default {
             expirationDateYear:null,
             cvv:null,
         }
+    },
+    methods:{
+        cardNumberFormat(){
+            if (this.cardNumber.length==4||this.cardNumber.length==9||this.cardNumber.length==14){
+                this.cardNumber+=" ";
+            }
+        }
     }
 }
 </script>
 
 <style lang="scss" scoped>
-    .cont{
+@import '~bootstrap/scss/bootstrap';
+
+    @include media-breakpoint-up(md) {
+        .cont{
         position: absolute;
         top: 12vh;
         right: 15vw;
         padding: 15vh 0;
+        }
+    }
+    .cont{
         font-size: 18px;
         &>*{
             width: 100%;
@@ -61,6 +74,6 @@ export default {
         input::-webkit-inner-spin-button {
         -webkit-appearance: none;
         margin: 0;
-}
+        }   
     }
 </style>
