@@ -45,31 +45,40 @@ export default {
 
 <style lang="scss" scoped>
 @import '~bootstrap/scss/bootstrap';
-    @include media-breakpoint-up(md) {
-        .cont{
-        top: 7vh;
-        right: 10vw;
-        font-size: .9rem;
-        }
+@include media-breakpoint-down(md){
+    .cont{
+        width: 100%;
+        margin-top: 23vh;
+        padding: 2vh 8vw;
+        font-size: 4vw;
     }
+}
+@include media-breakpoint-up(md) {
+    .cont{
+    top: 7vh;
+    right: 10vw;
+    font-size: .9rem;
+    width: 28vw;
+    padding: 15vh 0;
+    }
+}
 
-    @include media-breakpoint-up(xl) {
-        .cont{
-        top: 12vh;
-        right: 15vw;
-        font-size: 1.15rem;
-    }
+@include media-breakpoint-up(xl) {
+    .cont{
+    top: 12vh;
+    right: 15vw;
+    font-size: 1.15rem;
+}
 }
 .cont{
     position: absolute;
-    padding: 15vh 0;
         &>*{
             width: 100%;
         }
         & *{
             box-shadow: none !important;
         }
-        width: 28vw;
+        // width: 28vw;
         text-transform: uppercase;
         #expirationDateMonth,#expirationDateYear{
             width: 47%;

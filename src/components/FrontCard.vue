@@ -30,18 +30,17 @@ export default {
 <style lang="scss" scoped>
 @import '~bootstrap/scss/bootstrap';
 
-// @media (min-width: 0){
-//     .cont{
-//         position: absolute;
-//         top:20vh;
-//         left: 5vw;
-//         z-index: 2;
-//         img{
-//             // width: 90vw !important;
-//             max-width: fit-content;
-//         }
-//     }
-// }
+@include media-breakpoint-down(md){
+    .cont{
+        top:20vh;
+        left: 5vw;
+        z-index: 2;
+        width: 70%;
+        .txt{
+            font-size: 3.5vw;
+        }
+    }
+}
 .cont{
     .full-circle{
         top: 10%;
@@ -59,9 +58,9 @@ export default {
         background-color: rgba(255, 255, 255, 0);
     }
     .txt{
-        width: max-content;
-        top: 57%;
+        width: 80%;
         left: 6%;
+        top:57%;
         .exp-date{
             right: -13%;
         }
@@ -78,7 +77,7 @@ export default {
             font-size: 1.5rem;
         }
         .txt{
-        top: 54%;
+            top: 54%;
         }
     }
 }

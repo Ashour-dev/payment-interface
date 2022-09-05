@@ -15,7 +15,6 @@ export default {
 
 <style lang="scss" scoped>
 @import '~bootstrap/scss/bootstrap';
-
 .cont{
         margin-left: 5vw;
         position: relative;
@@ -24,15 +23,17 @@ export default {
             right: 12%;
         }
     }
-// @media (min-width: 0){
-//     .cont{
-//         position: absolute;
-//         top: 0;
-//         right: 0;
-//         width: 90vw;
-//         z-index: 1;
-//     }
-// }
+@include media-breakpoint-down(md){
+.cont{
+    position: absolute;
+    top:0;
+    right: 2vw;
+    z-index: 1;
+    width: 70%;
+    margin-left:auto;
+    font-size: 3vw;
+}
+}
 @include media-breakpoint-up(md) {
     .cont{  
     width: 70%;
@@ -42,6 +43,7 @@ export default {
 @include media-breakpoint-up(xl) {
     .cont{
         width: fit-content;
+        font-size: large;
     }
 }
 </style>

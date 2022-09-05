@@ -62,10 +62,14 @@ export default {
   color: hsl(278, 68%, 11%);
   position: relative;
 }
-@media (min-width: 0) {
+@include media-breakpoint-down(md){
   .desktopBackground{
   height: 35vh;
   width: 100vw;
+  }
+  .cards{
+  width: 100%;
+  padding: 0 2vw;
   }
 }
 @include media-breakpoint-up(md) {
