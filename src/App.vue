@@ -70,7 +70,7 @@ export default {
 }
 @include media-breakpoint-up(md) {
   .desktopBackground{
-  height: 100%;
+  height: 100vh;
   width: 30vw;
 }
 .cards{
