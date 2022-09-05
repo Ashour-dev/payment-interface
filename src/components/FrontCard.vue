@@ -1,6 +1,6 @@
 <template>
-    <div class="cont position-relative">
-        <img class="position-relative" src="../assets/bg-card-front.png" alt="">
+    <div class="cont">
+        <img class="position-relative w-100" src="../assets/bg-card-front.png" alt="">
         <div class="full-circle rounded-circle"></div>
         <div class="empty-circle rounded-circle"></div>
         <div class="txt text-white">
@@ -28,32 +28,46 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+// @media (min-width: 0){
+//     .cont{
+//         position: absolute;
+//         top:20vh;
+//         left: 5vw;
+//         z-index: 2;
+//         img{
+//             // width: 90vw !important;
+//             max-width: fit-content;
+//         }
+//     }
+// }
 .cont{
     .full-circle{
-        top: 4vh;
-        left: 2vw;
-        width: 3vw;
-        height: 3vw;
+        top: 10%;
+        left: 6%;
+        width: 10%;
+        padding-bottom: 10%;
         background-color: white;
     }
     .empty-circle{
-        top: 6vh;
-        left: 6vw;
-        width: 2.4vh;
-        height: 2.4vh;
-        border: .2vh solid white ;
+        top: 16%;
+        left:20%;
+        width: 3.3%;
+        padding-bottom: 3%;
+        border: 1px solid white ;
         background-color: rgba(255, 255, 255, 0);
     }
     .txt{
         width: max-content;
-        top: 20vh;
-        left: 2vw;
+        top: 57%;
+        left: 6%;
         .exp-date{
-            right: -3.2vw;
+            right: -13%;
         }
     }
     &>*{
         position: absolute;
     }
+    position: relative;
+    width: fit-content;
 }
 </style>
